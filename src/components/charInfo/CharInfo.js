@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import MarvelService from '../../services/MarvelService';
 import Spinner from '../spinner/Spinner';
@@ -114,7 +115,7 @@ const View = ({char}) => {
                 {
                     comics.map((item, i) => {
                         if (i > 9) return;
-                        return(
+                        return (
                             <li key={i} className="char__comics-item">
                                 {item.name}
                             </li>
@@ -124,6 +125,10 @@ const View = ({char}) => {
             </ul>
         </>
     )
+}
+
+CharInfo.propTypes = {
+    charId: PropTypes.number
 }
 
 export default CharInfo;
