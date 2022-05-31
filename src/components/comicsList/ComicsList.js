@@ -5,7 +5,7 @@ import useMarvelService from '../../services/MarvelService';
 
 import './comicsList.scss';
 
-const ComicsList = (props) => {
+const ComicsList = () => {
     const [comicsList, setComicsList] = useState([]);
     const [newItemLoading, setNewItemLoading] = useState(false);
     const [offset, setOffset] = useState(0);
