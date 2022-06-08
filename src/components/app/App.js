@@ -1,8 +1,8 @@
-import { lazy, Suspense } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {lazy, Suspense} from 'react';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 import AppHeader from "../appHeader/AppHeader";
-import Spinner from "../spinner/Spinner";
+import Spinner from '../spinner/Spinner';
 
 const Page404 = lazy(() => import('../pages/404'));
 const MainPage = lazy(() => import('../pages/MainPage'));
@@ -11,11 +11,9 @@ const SingleComicLayout = lazy(() => import('../pages/singleComicLayout/SingleCo
 const SingleCharacterLayout = lazy(() => import('../pages/singleCharacterLayout/SingleCharacterLayout'));
 const SinglePage = lazy(() => import('../pages/SinglePage'));
 
-//794
 const App = () => {
-
     return (
-       <Router>
+        <Router>
             <div className="app">
                 <AppHeader/>
                 <main>
@@ -33,16 +31,15 @@ const App = () => {
                             <Route exact path="/characters/:id">
                                 <SinglePage Component={SingleCharacterLayout} dataType='character'/>
                             </Route>
-                            <Route path="*" >
+                            <Route path="*">
                                 <Page404/>
                             </Route>
                         </Switch>
                     </Suspense>
                 </main>
             </div>
-       </Router>
+        </Router>
     )
-    
 }
 
 export default App;
