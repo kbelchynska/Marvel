@@ -1,4 +1,4 @@
-# To see site: [https://belchinskaya.github.io/Marvel/](https://kbelchynska.github.io/Marvel/)
+# To see site: [https://kbelchynska.github.io/Marvel/](https://kbelchynska.github.io/Marvel/)
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
